@@ -122,12 +122,12 @@ header nav .logo img {
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     padding: 20px;
-    height: 90vh;
+    height: 100%;
 }
 
 .banner-img img {
     width: 100%;
-    height: 94%;
+    height: 90%;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     animation: coming1 linear 1s;
@@ -136,7 +136,7 @@ header nav .logo img {
 
 .banner-text h1 {
     font-family: Cairo-Bold;
-    font-size: 75px;
+    font-size: 65px;
     color: var(--primary-color);
 }
 
@@ -171,6 +171,7 @@ header nav .logo img {
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;
+    height: auto;
     align-items: center;
 }
 
@@ -180,9 +181,9 @@ header nav .logo img {
 
 .abouts-containt {
     width: 90%;
-    height: 60vh;
+    /* height: 100%; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
 }
 
@@ -202,6 +203,10 @@ header nav .logo img {
     border-radius: 15px;
 }
 
+.abouts-second-div{
+    height: 70%;
+}
+
 .learn-btn {
     padding: 5px 15px;
     text-decoration: none;
@@ -213,7 +218,7 @@ header nav .logo img {
 
 .abouts-second-div img {
     width: 100%;
-    height: 45%;
+    height: 50%;
     border-radius: 10px;
 }
 
@@ -309,16 +314,20 @@ footer {
     bottom: 20px;
     right: 20px;
     background-color: var(--primary-color);
-    color: #fff;
+    color: #FFF;
     border: none;
+    font-size: 15px;
+    font-weight: bold;
     padding: 10px 15px;
+    border: solid 2px var(--secondary-color);
     border-radius: 50%;
     cursor: pointer;
     display: none;
 }
 
 #backToTopBtn:hover {
-    background-color: #008CBA;
+    background-color: var(--secondary-color);
+
 }
 
 /* Responsive */
@@ -338,9 +347,21 @@ footer {
         text-align: center;
     }
 
-    .nav-links.active {
+    .nav-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+
+    .nav-links.active{
         display: flex;
     }
+
+    /* .nav-btn.active {
+        display:flex;
+
+    } */
 
     .abouts-containt {
         grid-template-columns: 1fr;
@@ -356,5 +377,13 @@ footer {
 
     .banner-text a {
         width: 30%;
+    }
+
+    #home{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 20px;
+        height: 90%;
     }
 }

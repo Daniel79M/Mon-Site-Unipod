@@ -1,9 +1,11 @@
 // Menu Hamburger
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
+const navbtn = document.querySelector('.nav-btn')
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    navbtn.classList.toggle('active')
 });
 
 // Bouton "Retour en haut"
